@@ -98,15 +98,21 @@ body { background: var(--bg); color: var(--accent); font-family: 'JetBrains Mono
 
 /* slider */
 .carousel {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
     display: flex;
     align-items: center;
     gap: 10px;
+
+    background-color: #123a2a;
 }
 
 .viewport {
     width: 100%;
     max-width: 1500px;
     overflow: hidden;
+    flex: 1;
 }
 
 .track {
@@ -125,6 +131,7 @@ body { background: var(--bg); color: var(--accent); font-family: 'JetBrains Mono
 
 /* sections */
 .section {
+    width: 100%;
     padding: 60px 100px;
 }
 
