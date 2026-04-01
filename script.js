@@ -27,7 +27,7 @@ function initCarousel() {
           update(false)
         }, 200)
       }
-    }, 1200)
+    }, 1500)
   }
 
   function pauseAuto() {
@@ -36,7 +36,7 @@ function initCarousel() {
 
     resumeTimeout = setTimeout(() => {
       startAuto()
-    }, 2000)
+    }, 500)
   }
 
   document.getElementById('next').onclick = () => {
