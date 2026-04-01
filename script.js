@@ -20,7 +20,7 @@ function initCarousel() {
       setTimeout(() => {
         index = 0
         update(false)
-      }, 200) // 👈 match transition (0.2s)
+      }, 200)
     }
   }
 
@@ -44,7 +44,7 @@ function initCarousel() {
       setTimeout(() => {
         index = 0
         update(false)
-      }, 200) // 👈 match transition
+      }, 200)
     }
   }, 1200)
 }
