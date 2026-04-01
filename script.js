@@ -19,8 +19,8 @@ function initCarousel() {
     if (index === total) {
       setTimeout(() => {
         index = 0
-        update(false) // jump without animation
-      }, 500)
+        update(false)
+      }, 200) // 👈 match transition (0.2s)
     }
   }
 
@@ -44,7 +44,7 @@ function initCarousel() {
       setTimeout(() => {
         index = 0
         update(false)
-      }, 500)
+      }, 200) // 👈 match transition
     }
   }, 1200)
 }
