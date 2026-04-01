@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 
-    <title>SAGA | MISSION CONTROL</title>
+    <title>HACKATHON LEAGUE</title>
 
 </head>
 
@@ -24,13 +24,13 @@
             <a href="#faq">FAQ</a>
             <a href="#connect">CONNECT</a>
         </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5KWM0LH5bOWMSdtkpQehKXO1IYTECtZuQsjn91D9O2PWOXw/viewform?usp=dialog" target="_blank" style="color: white; text-decoration: none; font-weight: bold; border: 1px solid white; padding: 10px 20px;">REGISTER NOW</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5KWM0LH5bOWMSdtkpQehKXO1IYTECtZuQsjn91D9O2PWOXw/viewform?usp=dialog" target="_blank" style="color: rgb(255, 0, 0); text-decoration: none; font-weight: bold; border: 1px solid white; padding: 10px 20px;">REGISTER NOW</a>
     </nav>
     <!--************************* Tool bar ***************************-->
 
     
     <!--************************* Status bar ***************************-->
-    <section class="status-bar">
+    <section class="section section-neutral status-bar">
         <div class="timer-box">
             <div class="timer-label">Event starts in:</div>
             <div id="timer">00:00:00:00</div>
@@ -40,15 +40,16 @@
     <!--************************* Status bar ***************************-->
 
     <!--************************* Mission ***************************-->
-    <section class="hero", id="mission">
+    <section class="section section-blue" id="mission">
         <span class="label">OUR MISSION</span>
-        <span class="label">BUILDING THE SAGA ECOSYSTEM.<br><br>Smart Nation: Technologies and Ideas for Society</span>
+        <span class="label">DIGITAL COUNTRY: AUTOMATION AND ROBOTIZATION</span>
     </section>
     <!--************************* Mission ***************************-->
 
     
     <!--************************* Event ***************************-->
-    <div class="mega-box span-2" id="event">
+
+    <section class="section section-neutral mega-box_blue span-2" id="event">
         <span class="label">HACKATHON</span>
         <div class="event-container">
             <div class="event-main">
@@ -78,12 +79,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!--************************* Event ***************************-->
 
     <!--************************* Slider ***************************-->
-    <div class="mega-box span-2" id="event">
-        <h2 style="font-size: 40px; margin-top: 0; line-height: 1;">PREVIOUS HACKATHON EVENT</h2>
+    <section class="section section-green mega-box_green span-2">
+        <span class="label">PREVIOUS HACKATHON EVENT</span>
 
         <div class="carousel">
             <button id="prev">◀</button>
@@ -114,12 +115,12 @@
             </div>
             <button id="next">▶</button>
         </div>
-    </div>
+    </section>
     <!--************************* Slider ***************************-->
     
     <!--************************* Core Team ***************************-->
     <div class="mega-grid">
-        <div class="mega-box span-2", id="team">
+        <section class="section section-brown mega-box_brown span-2" id="team">
             <h1 style="text-align:center">OUR TEAM</h1>
             <div class="team-display">
                 <div class="member-card">
@@ -167,12 +168,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     <!--************************* Core Team ***************************-->
 
         
     <!--************************* Sponsors ***************************-->
-        <div class="mega-box span-2", id="sponsors">
+        <section class="section section-neutral mega-box_grey span-2" id="sponsors">
             <h1 style="text-align:center">SPONSORS</h1>
             <div class="partner-grid">
                 <img src="PARTNER_LOGO_1" class="partner-logo">
@@ -180,12 +181,12 @@
                 <img src="PARTNER_LOGO_3" class="partner-logo">
                 <img src="PARTNER_LOGO_4" class="partner-logo">
             </div>
-        </div>
+        </section>
     <!--************************* Sponsors ***************************-->
 
         
     <!--************************* Mentors ***************************-->
-        <div class="mega-box span-2", id="mentors">
+        <section class="section section-blue mega-box_blue span-2" id="mentors">
             <h1 style="text-align:center">MENTORS</h1>
             <div class="team-display">
                 <div class="member-card">
@@ -229,11 +230,11 @@
                 </div>
                 
             </div>
-        </div>
+        </section>
     <!--************************* Mentors ***************************-->
 
     <!--************************* Speakers ***************************-->
-        <div class="mega-box span-2", id="speaker">
+        <section class="section section-brown mega-box_brown span-2" id="speaker">
             <h1 style="text-align:center">SPEAKERS</h1>
             <div class="team-display">
                 <div class="member-card">
@@ -253,11 +254,11 @@
                 </div>
                 
             </div>
-        </div>
+        </section>
     <!--************************* Mentors ***************************-->
         
     <!--************************* FAQ ***************************-->
-        <div class="mega-box span-2", id="faq">
+       <section class="section section-neutral mega-box span-2" id="faq">
             <h1 style="text-align:center;">FAQ</h1>
             <div class="faq-container">
                 <details class="faq-item">
@@ -265,13 +266,13 @@
                     <p>We are a community-funded meritocracy. Your only cost is your time and dedication.</p>
                 </details>
             </div>
-        </div>
+        </section>
     </div>
     <!--************************* FAQ ***************************-->
 
     
     <!--************************* Full Info ***************************-->
-    <div class="mega-grid no-border">
+    <section class="section section-dark mega-grid no-border">
         <div class="mega-box" id="info">
             <h1 style="text-align:center; font-size: 20px;">FULL INFORMATION</h1>
             <div class="contact-links">
@@ -301,12 +302,12 @@
                 </a>
             </div>
         </div>
-    </div>
+    </section>
     <!--************************* Connect ***************************-->
 
-    <footer style="padding: 100px 50px; color: var(--text-dim); font-size: 12px; letter-spacing: 2px;">
+    <!-- <footer style="padding: 100px 50px; color: var(--text-dim); font-size: 12px; letter-spacing: 2px; background-color: var(--bg_grey)">
         SAGA
-    </footer>
+    </footer> -->
     <script src="script.js"></script>
 </body>
 </html>
