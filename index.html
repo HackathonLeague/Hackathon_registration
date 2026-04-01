@@ -81,6 +81,35 @@
         .timer-label { font-size: 10px; color: var(--text-dim); letter-spacing: 3px; margin-bottom: 10px; text-transform: uppercase; }
         #timer { font-size: 28px; font-weight: 700; color: var(--accent); letter-spacing: 2px; }
         /* timer */
+
+        /* slider */
+        .slider {
+          width: 600px;         
+          overflow: hidden; 
+          margin: auto;
+        }
+        
+        .track {
+          display: flex;
+          width: max-content;
+          animation: scroll 20s linear infinite;
+        }
+        
+        .track img {
+          width: 200px;
+          height: auto;
+          flex-shrink: 0;
+        }
+        
+        @keyframes scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+        /* slider */
         
         @media (max-width: 900px) {
             .nav { padding: 20px; }
