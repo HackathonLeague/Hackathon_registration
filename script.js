@@ -5,25 +5,48 @@ function initCarousel() {
   const total = imgs.length / 2
   let index = 0
 
-  function update() {
+  function update(animate = true) {
     const width = imgs[0].offsetWidth
+
+    track.style.transition = animate ? 'transform 0.2s ease' : 'none'
     track.style.transform = `translateX(-${index * width}px)`
   }
 
   document.getElementById('next').onclick = () => {
-    index = (index + 1) % total
+    index++
     update()
+
+    if (index === total) {
+      setTimeout(() => {
+        index = 0
+        update(false) // jump without animation
+      }, 500)
+    }
   }
 
   document.getElementById('prev').onclick = () => {
-    index = (index - 1 + total) % total
-    update()
+    if (index === 0) {
+      index = total
+      update(false)
+    }
+
+    setTimeout(() => {
+      index--
+      update()
+    }, 0)
   }
 
   setInterval(() => {
-    index = (index + 1) % total
+    index++
     update()
-  }, 3000)
+
+    if (index === total) {
+      setTimeout(() => {
+        index = 0
+        update(false)
+      }, 500)
+    }
+  }, 1200)
 }
 
 window.onload = initCarousel
