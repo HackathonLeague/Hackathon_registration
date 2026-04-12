@@ -1,314 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-
-    <title>HACKATHON LEAGUE</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hackathon League</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
+<body>  
+    <section class="hero">
+        <nav class="nav">
+        <div class="nav-left">
+        </div>
 
-<body>
-    <!--************************* Tool bar ***************************-->
-    <nav class="nav">
-        <img src="YOUR_LOGO_HERE" alt="SAGA" class="logo-img">
         <div class="nav-links">
-            <a href="#mission">MISSION</a>
-            <a href="#event">HACKATHON</a>
-            <a href="#team">TEAM</a>
-            <a href="#sponsors">SPONSORS</a>
-            <a href="#mentors">MENTORS</a>
-            <a href="#speaker">SPEAKER</a>
+            <a href="#mission">О ПРОЕКТЕ</a>
+            <a href="#event">ХАКАТОН</a>
+            <a href="#team">КОМАНДА</a>
+            <a href="#mentors">МЕНТОРЫ</a>
+            <a href="#speakers">СПИКЕРЫ</a>
+            <a href="#sponsors">СПОНСОРЫ</a>
             <a href="#faq">FAQ</a>
-            <a href="#connect">CONNECT</a>
+            <a href="#connect">КОНТАКТЫ</a>
         </div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5KWM0LH5bOWMSdtkpQehKXO1IYTECtZuQsjn91D9O2PWOXw/viewform?usp=dialog" target="_blank" style="color: rgb(255, 0, 0); text-decoration: none; font-weight: bold; border: 1px solid white; padding: 10px 20px;">REGISTER NOW</a>
-    </nav>
-    <!--************************* Tool bar ***************************-->
+        </nav>
 
-    
-    <!--************************* Status bar ***************************-->
-    <section class="section section-neutral status-bar">
-        <div class="timer-box">
-            <div class="timer-label">Event starts in:</div>
-            <div id="timer">00:00:00:00</div>
+        <div class="content">
+        <div class="meta">
+            <span>2–3 МАЯ</span>
+            <span class="dot"></span>
+            <span>БИШКЕК</span>
+        </div>
+
+        <h1>
+            HACKATHON
+            <span>LEAGUE</span>
+        </h1>
+
+        <p class="subtitle">
+            Республиканский хакатон для школьников,<br>
+            где идеи превращаются в реальные проекты<br><br><br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5KWM0LH5bOWMSdtkpQehKXO1IYTECtZuQsjn91D9O2PWOXw/viewform?usp=dialog" target="_blank" class="register-btn">
+                REGISTER NOW
+            </a>
+        </p>
+        
         </div>
     </section>
 
-    <!--************************* Status bar ***************************-->
-
-    <!--************************* Mission ***************************-->
-    <section class="section section-blue" id="mission">
-        <span class="label">OUR MISSION</span>
-        <span class="label">DIGITAL COUNTRY: AUTOMATION AND ROBOTIZATION</span>
+    <section class="info-strip" id="mission">
+        <div class="info-card">
+        <div class="info-label">НАША МИССИЯ</div>
+        <div class="info-text">Помочь школьникам превратить идеи в реальные технологические проекты и собрать сильное комьюнити будущих разработчиков.</div>
+        </div>
+        <div class="info-card accent-card">
+        <div class="info-label">ФОРМАТ</div>
+        <div class="info-text">48 часов командной работы, менторская поддержка, презентации и финальный питч лучших решений.</div>
+        </div>
     </section>
-    <!--************************* Mission ***************************-->
 
-    
-    <!--************************* Event ***************************-->
+    <!--************************* Slider ***************************-->
+    <section class="slider-section">
+    <span class="slider-label">PREVIOUS HACKATHON EVENT</span>
 
-    <section class="section section-neutral mega-box_blue span-2" id="event">
-        <span class="label">HACKATHON</span>
-        <div class="event-container">
-            <div class="event-main">
-                <h2 style="font-size: 40px; margin-top: 0; line-height: 1;">SAGA HACK 2026</h2>
-                <p style="font-size: 18px; color: var(--text-dim); margin-bottom: 30px; color: white;">
-                    48 hours of high-intensity building. We are gathering the top 300 developers in Bishkek to solve critical infrastructure challenges using decentralized protocols. No slides, just source code.
-                    The event will be organized in a team-based format, with 2 to 6 participants in each team. It is scheduled to take place from May 2 to May 4 and is open to participants aged 13 to 18 years old. The working languages of the event will be Kyrgyz, Russian, and English.
-                </p>
+    <div class="auto-carousel">
+        <div class="auto-track">
+        <img src="images/t0.jpg" alt="">
+        <img src="images/t1.jpg" alt="">
+        <img src="images/t2.jpg" alt="">
+        <img src="images/t3.jpg" alt="">
+        <img src="images/t4.jpg" alt="">
+        <img src="images/t5.jpg" alt="">
+        <img src="images/t6.jpg" alt="">
+        <img src="images/t7.jpg" alt="">
+        <img src="images/t8.jpg" alt="">
+        <img src="images/t9.jpg" alt="">
 
-                <a href="#info" style="color: var(--accent); text-decoration: none; font-size: 14px; border-bottom: 1px solid var(--accent); padding-bottom: 5px;">
-                    READ FULL HANDBOOK AND RULES ↓
-                </a>
+        <!-- duplicate for seamless loop -->
+        <img src="images/t0.jpg" alt="">
+        <img src="images/t1.jpg" alt="">
+        <img src="images/t2.jpg" alt="">
+        <img src="images/t3.jpg" alt="">
+        <img src="images/t4.jpg" alt="">
+        <img src="images/t5.jpg" alt="">
+        <img src="images/t6.jpg" alt="">
+        <img src="images/t7.jpg" alt="">
+        <img src="images/t8.jpg" alt="">
+        <img src="images/t9.jpg" alt="">
+        </div>
+    </div>
+    </section>
+    <!--************************* Slider ***************************-->
+
+    <section class="event-section">
+        <div class="section-head">
+        <span>О ХАКАТОНЕ</span>
+        </div>
+        <div class="event-grid">
+        <div class="event-main">
+            <h2>HACKATHON LEAGUE 2026</h2>
+            <p>Интенсивный республиканский хакатон для школьников, где участники работают в командах, создают MVP, получают обратную связь от менторов и защищают свои проекты перед жюри.</p>
+            <a href="#">ПОДРОБНЫЕ ПРАВИЛА →</a>
+        </div>
+        <div class="event-side">
+            <div>
+            <span>ДАТА</span>
+            <strong>2–3 МАЯ</strong>
             </div>
+            <div>
+            <span>ЛОКАЦИЯ</span>
+            <strong>БИШКЕК</strong>
+            </div>
+            <div>
+            <span>ФОРМАТ</span>
+            <strong>КОМАНДЫ 2–5</strong>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+    <!-- Core team -->
+    <section class="cards-section" id="team">
+        <div class="section-head">
+            <span>КОМАНДА</span>
+        </div>
+        <div class="team-display">
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Mamatganyev Nurmukhammad</div>
+                <div class="member-role">Team Leader</div>
+                </div>
+            </article>
+
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Amangeldiev Sherkhan</div>
+                <div class="member-role">Project Manager</div>
+                </div>
+            </article>
+
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Arapbaeva Zhyldyz</div>
+                <div class="member-role">Event Coordinator</div>
+                </div>
+            </article>
+
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Mukashov Daniar</div>
+                <div class="member-role">Event Manager</div>
+                </div>
+            </article>
+
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Baimyrzaev Aruubek</div>
+                <div class="member-role">Technical Manager</div>
+                </div>
+            </article>
+
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Tynchtykbekov Aivar</div>
+                <div class="member-role">SOCIAL GAY</div>
+                </div>
+            </article>
             
-            <div class="event-sidebar">
-                <div style="margin-bottom: 20px;">
-                    <div style="font-size: 10px; color: var(--text-dim);">DATE</div>
-                    <div style="font-size: 16px;">MAY 2-3, 2026</div>
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Symbatbekov Yenisey</div>
+                <div class="member-role">Videographer</div>
                 </div>
-                <div style="margin-bottom: 20px;">
-                    <div style="font-size: 10px; color: var(--text-dim);">PRIZE POOL</div>
-                    <div style="font-size: 16px;">$500 USD</div>
-                </div>
-                <div>
-                    <div style="font-size: 10px; color: var(--text-dim);">LOCATION</div>
-                    <div style="font-size: 16px;">BISHKEK</div>
-                </div>
-            </div>
+            </article>
         </div>
     </section>
-    <!--************************* Event ***************************-->
+    <!-- Core team -->
 
-    <!--************************* Slider ***************************-->
-    <section class="section section-green mega-box_green span-2">
-        <span class="label">PREVIOUS HACKATHON EVENT</span>
-    </section>
-    <div class="carousel">
-        <button id="prev">◀</button>
-        <div class="viewport">
-            <div class="track">
-                <img src="images/t0.jpg">
-                <img src="images/t1.jpg">
-                <img src="images/t2.jpg">
-                <img src="images/t3.jpg">
-                <img src="images/t4.jpg">
-                <img src="images/t5.jpg">
-                <img src="images/t6.jpg">
-                <img src="images/t7.jpg">
-                <img src="images/t8.jpg">
-                <img src="images/t9.jpg">
-                <!-- Smoothie -->
-                <img src="images/t0.jpg">
-                <img src="images/t1.jpg">
-                <img src="images/t2.jpg">
-                <img src="images/t3.jpg">
-                <img src="images/t4.jpg">
-                <img src="images/t5.jpg">
-                <img src="images/t6.jpg">
-                <img src="images/t7.jpg">
-                <img src="images/t8.jpg">
-                <img src="images/t9.jpg">
-            </div>
+    <section class="cards-section alt-section" id="mentors">
+        <div class="section-head">
+        <span>Менторы</span>
         </div>
-        <button id="next">▶</button>
+        <div class="team-display">
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Нурмухаммад</div>
+                <div class="member-role">Team Lead</div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <section class="cards-section alt-section" id="speakers">
+        <div class="section-head">
+        <span>СПИКЕРЫ</span>
+        </div>
+        <div class="team-display">
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Нурмухаммад</div>
+                <div class="member-role">Team Lead</div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <section class="faq-section" id="faq">
+        <div class="section-head">
+        <span>FAQ</span>
+        </div>
+        <div class="faq-list">
+        <details>
+            <summary>Кто может участвовать?</summary>
+            <p>Школьники, которым интересны технологии, стартапы и командная работа над проектами.</p>
+        </details>
+        <details>
+            <summary>Нужно ли приходить с готовой идеей?</summary>
+            <p>Нет. Можно прийти с идеей или собрать её уже на месте вместе с командой.</p>
+        </details>
+        <details>
+            <summary>Участие бесплатное?</summary>
+            <p>Да, участие 100 евро.</p>
+        </details>
+        </div>
+    </section>
+
+  <!--************************* Documents / Info ***************************-->
+    <section class="info-connect-row">
+    <div class="info-box" id="info">
+        <h2>ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h2>
+        <div class="contact-links">
+        <a href="rules.html" target="_blank" class="contact-link" title="Правила">
+            <svg viewBox="0 0 24 24" style="width:40px;"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        </a>
+        <a href="handbook.html" target="_blank" class="contact-link" title="Хэндбук">
+            <svg viewBox="0 0 24 24" style="width:40px;"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4z"/></svg>
+        </a>
+        </div>
     </div>
-    <section class="section section-green mega-box_green span-2">
-    </section>
-    <!--************************* Slider ***************************-->
-    
-    <!--************************* Core Team ***************************-->
-    <div class="mega-grid">
-        <section class="section section-brown mega-box_brown span-2" id="team">
-            <h1 style="text-align:center">OUR TEAM</h1>
-            <div class="team-display">
-                <div class="member-card">
-                    <img src="PHOTO_URL_HERE" class="member-img">
-                    <div class="member-info">
-                        <div class="member-name">Mamatganyev Nurmukhammad</div>
-                        <div class="member-role">Team Leader</div>
-                    </div>
-                </div>
-                <div class="member-card">
-                    <img src="PHOTO_URL_HERE" class="member-img">
-                    <div class="member-info">
-                        <div class="member-name">Amangeldiev Sherkhan</div>
-                        <div class="member-role">Project Manager</div>
-                    </div>
-                </div>
-                <div class="member-card">
-                    <img src="PHOTO_URL_HERE" class="member-img">
-                    <div class="member-info">
-                        <div class="member-name">Mukashov Daniar</div>
-                        <div class="member-role">Event Manager</div>
-                    </div>
-                </div>
-                
-                <div class="member-card">
-                    <img src="PHOTO_URL_HERE" class="member-img">
-                    <div class="member-info">
-                        <div class="member-name">Arapbaeva Zhyldyz</div>
-                        <div class="member-role">Event Coordinator</div>
-                    </div>
-                </div>
-                
-                <div class="member-card">
-                    <img src="PHOTO_URL_HERE" class="member-img">
-                    <div class="member-info">
-                        <div class="member-name">Symbatbekov Yenisey</div>
-                        <div class="member-role">PR Manager</div>
-                    </div>
-                </div>
-                <div class="member-card">
-                    <img src="PHOTO_URL_HERE" class="member-img">
-                    <div class="member-info">
-                        <div class="member-name">Baimyrzaev Aruubek</div>
-                        <div class="member-role">Technical Manager</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!--************************* Core Team ***************************-->
+  <!--************************* Documents / Info ***************************-->
 
-        
-    <!--************************* Sponsors ***************************-->
-        <section class="section section-neutral mega-box_grey span-2" id="sponsors">
-            <h1 style="text-align:center">SPONSORS</h1>
-            <div class="partner-grid">
-                <img src="PARTNER_LOGO_1" class="partner-logo">
-                <img src="PARTNER_LOGO_2" class="partner-logo">
-                <img src="PARTNER_LOGO_3" class="partner-logo">
-                <img src="PARTNER_LOGO_4" class="partner-logo">
-            </div>
-        </section>
-    <!--************************* Sponsors ***************************-->
-
-        
-    <!--************************* Mentors ***************************-->
-        <section class="section section-blue mega-box_blue span-2" id="mentors">
-            <h1 style="text-align:center">MENTORS</h1>
-            <div class="team-display">
-                <div class="member-card">
-                    <img src="PHOTO_URL_HERE" class="member-img">
-                    <div class="member-info">
-                        <div class="member-name">Salamat Burjuev</div>
-                        <div class="member-role">hz</div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="PHOTO_URL_HERE" class="member-img">
-                    <div class="member-info">
-                        <div class="member-name">Salamat Burjuev</div>
-                        <div class="member-role">hz</div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="PHOTO_URL_HERE" class="member-img">
-                    <div class="member-info">
-                        <div class="member-name">Salamat Burjuev</div>
-                        <div class="member-role">hz</div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="PHOTO_URL_HERE" class="member-img">
-                    <div class="member-info">
-                        <div class="member-name">Salamat Burjuev</div>
-                        <div class="member-role">hz</div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="PHOTO_URL_HERE" class="member-img">
-                    <div class="member-info">
-                        <div class="member-name">Salamat Burjuev</div>
-                        <div class="member-role">hz</div>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-    <!--************************* Mentors ***************************-->
-
-    <!--************************* Speakers ***************************-->
-        <section class="section section-brown mega-box_brown span-2" id="speaker">
-            <h1 style="text-align:center">SPEAKERS</h1>
-            <div class="team-display">
-                <div class="member-card">
-                    <img src="PHOTO_URL_HERE" class="member-img">
-                    <div class="member-info">
-                        <div class="member-name">Erkin Kadyrov</div>
-                        <div class="member-role">hz</div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="images/Iskender.png" class="member-img">
-                    <div class="member-info">
-                        <div class="member-name">Batyrbek uulu Iskender</div>
-                        <div class="member-role">hz</div>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-    <!--************************* Mentors ***************************-->
-        
-    <!--************************* FAQ ***************************-->
-       <section class="section section-neutral mega-box span-2" id="faq">
-            <h1 style="text-align:center;">FAQ</h1>
-            <div class="faq-container">
-                <details class="faq-item">
-                    <summary>Participation Cost</summary>
-                    <p>We are a community-funded meritocracy. Your only cost is your time and dedication.</p>
-                </details>
-            </div>
-        </section>
-    </div>
-    <!--************************* FAQ ***************************-->
-
-    
-    <!--************************* Full Info ***************************-->
-    <section class="section section-dark mega-grid no-border">
-        <div class="mega-box" id="info">
-            <h1 style="text-align:center; font-size: 20px;">FULL INFORMATION</h1>
-            <div class="contact-links">
-                <a href="rules.html" target="_blank" class="contact-link" title="Rules">
-                    <svg viewBox="0 0 24 24" style="width:40px;"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-                </a>
-                <a href="handbook.html" target="_blank" class="contact-link" title="Handbook">
-                    <svg viewBox="0 0 24 24" style="width:40px;"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4z"/></svg>
-                </a>
-            </div>
-        </div>
-    <!--************************* Full Info ***************************-->
-
-        
     <!--************************* Connect ***************************-->
-        <div class="mega-box" id="connect">
-            <h1 style="text-align:center; font-size: 20px;">CONTACT US</h1>
-            <div class="contact-links">
-                <a href="https://t.me/linkidk" target="_blank" class="contact-link">
-                    <svg viewBox="0 0 24 24" style="width:40px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-                </a>
-                <a href="https://www.instagram.com/hackathon.league/" target="_blank" class="contact-link">
-                    <svg viewBox="0 0 24 24" style="width:40px;"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8A3.6 3.6 0 007.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6A3.6 3.6 0 0016.4 4H7.6m4.4 3.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9m0 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5m4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/></svg>
-                </a>
-                <a href="mailto:core@saga.xyz" target="_blank" class="contact-link">
-                    <svg viewBox="0 0 24 24" style="width:40px;"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                </a>
-            </div>
+    <div class="info-box" id="connect">
+        <h2>СВЯЗАТЬСЯ С НАМИ</h2>
+        <div class="contact-links">
+        <a href="https://t.me/your_telegram" target="_blank" class="contact-link" title="Telegram">
+            <svg viewBox="0 0 24 24" style="width:40px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/hackathon.league/" target="_blank" class="contact-link" title="Instagram">
+            <svg viewBox="0 0 24 24" style="width:40px;"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8A3.6 3.6 0 007.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6A3.6 3.6 0 0016.4 4H7.6m4.4 3.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9m0 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5m4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/></svg>
+        </a>
+        <a href="mailto:hackathonleaguekg@gmail.com" target="_blank" class="contact-link" title="Email">
+            <svg viewBox="0 0 24 24" style="width:40px;"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
         </div>
+    </div>
     </section>
     <!--************************* Connect ***************************-->
-
-    <!-- <footer style="padding: 100px 50px; color: var(--text-dim); font-size: 12px; letter-spacing: 2px; background-color: var(--bg_grey)">
-        SAGA
-    </footer> -->
-    <script src="script.js"></script>
 </body>
 </html>
