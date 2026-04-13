@@ -19,9 +19,9 @@
             <a href="#mission">О ПРОЕКТЕ</a>
             <a href="#event">ХАКАТОН</a>
             <a href="#team">КОМАНДА</a>
+            <a href="#sponsors">СПОНСОРЫ</a>
             <a href="#mentors">МЕНТОРЫ</a>
             <a href="#speakers">СПИКЕРЫ</a>
-            <a href="#sponsors">СПОНСОРЫ</a>
             <a href="#faq">FAQ</a>
             <a href="#connect">КОНТАКТЫ</a>
         </div>
@@ -42,7 +42,7 @@
         <p class="subtitle">
             Республиканский хакатон для школьников,<br>
             где идеи превращаются в реальные проекты<br><br><br>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5KWM0LH5bOWMSdtkpQehKXO1IYTECtZuQsjn91D9O2PWOXw/viewform?usp=dialog" target="_blank" class="register-btn">
+            <a href="https://t.me/Hackathon_League_Bot" target="_blank" class="register-btn">
                 REGISTER NOW
             </a>
         </p>
@@ -50,7 +50,7 @@
         </div>
     </section>
 
-    <section class="info-strip" id="mission">
+    <section class="info-strip soft-block" id="mission">
         <div class="info-card">
         <div class="info-label">НАША МИССИЯ</div>
         <div class="info-text">Помочь школьникам превратить идеи в реальные технологические проекты и собрать сильное комьюнити будущих разработчиков.</div>
@@ -62,7 +62,7 @@
     </section>
 
     <!--************************* Slider ***************************-->
-    <section class="slider-section">
+    <section class="slider-section soft-block">
     <span class="slider-label">PREVIOUS HACKATHON EVENT</span>
 
     <div class="auto-carousel">
@@ -94,7 +94,9 @@
     </section>
     <!--************************* Slider ***************************-->
 
-    <section class="event-section">
+    <!-- <div class="section-divider"></div> -->
+
+    <section class="event-section soft-block" id="event">
         <div class="section-head">
         <span>О ХАКАТОНЕ</span>
         </div>
@@ -102,7 +104,7 @@
         <div class="event-main">
             <h2>HACKATHON LEAGUE 2026</h2>
             <p>Интенсивный республиканский хакатон для школьников, где участники работают в командах, создают MVP, получают обратную связь от менторов и защищают свои проекты перед жюри.</p>
-            <a href="#">ПОДРОБНЫЕ ПРАВИЛА →</a>
+            <a href="#info">ПОДРОБНЫЕ ПРАВИЛА →</a>
         </div>
         <div class="event-side">
             <div>
@@ -124,7 +126,7 @@
     </section>
     
     <!-- Core team -->
-    <section class="cards-section" id="team">
+    <section class="cards-section soft-block" id="team">
         <div class="section-head">
             <h2 class="sponsors-title">Наша команда</h2>
         </div>
@@ -181,25 +183,27 @@
                 <img src="PHOTO_URL_HERE" class="member-img">
                 <div class="member-info">
                 <div class="member-name">Symbatbekov Yenisey</div>
-                <div class="member-role">PR Manager</div>
+                <div class="member-role" id="sponsors">PR Manager</div>
                 </div>
             </article>
         </div>
     </section>
     <!-- Core team -->
-
-    <!-- Sponsors -->
-    <section class="sponsors-showcase" id="sponsors">
-        <h2 class="sponsors-title">Спонсоры</h2>
+    <div class="section-divider"></div>
+    
+    <section class="cards-section soft-block">
+        <!-- Sponsors -->
+        <h2 class="sponsors-title" id="mentors">Спонсоры</h2>
 
         <div class="sponsors-wall">
             <img src="images/akylman_logo.png" alt="Sponsor 1" class="sponsor-logo">
             <img src="images/stem_logo.png" alt="Sponsor 2" class="sponsor-logo">
         </div>
-    </section>
-    <!-- Sponsors -->
+        <!-- Sponsors -->
 
-    <section class="cards-section alt-section" id="mentors">
+        <div class="section-divider"></div>
+
+        <!-- Mentors -->
         <div class="section-head">
             <h2 class="sponsors-title">Менторы</h2>
         </div>
@@ -212,10 +216,11 @@
                 </div>
             </article>
         </div>
-    </section>
+        <!-- Mentors -->
 
+        <div class="section-divider" id="speakers"></div>
 
-    <section class="cards-section alt-section" id="speakers">
+        <!-- Speakers -->
         <div class="section-head">
             <h2 class="sponsors-title">Спикеры</h2>
         </div>
@@ -228,9 +233,12 @@
                 </div>
             </article>
         </div>
-    </section>
+        <!-- Speakers -->
 
-    <section class="faq-section" id="faq">
+    </section>
+    
+
+    <section class="faq-section soft-block" id="faq">
         <div class="section-head">
         <span>FAQ</span>
         </div>
@@ -251,7 +259,7 @@
     </section>
 
   <!--************************* Documents / Info ***************************-->
-    <section class="info-connect-row">
+    <section class="info-connect-row soft-block">
     <div class="info-box" id="info">
         <h2>ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h2>
         <div class="contact-links">
@@ -269,7 +277,7 @@
     <div class="info-box" id="connect">
         <h2>СВЯЗАТЬСЯ С НАМИ</h2>
         <div class="contact-links">
-        <a href="https://t.me/your_telegram" target="_blank" class="contact-link" title="Telegram">
+        <a href="https://t.me/Hackathon_League_Bot" target="_blank" class="contact-link" title="Telegram">
             <svg viewBox="0 0 24 24" style="width:40px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
         </a>
         <a href="https://www.instagram.com/hackathon.league/" target="_blank" class="contact-link" title="Instagram">
