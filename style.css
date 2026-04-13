@@ -691,3 +691,67 @@ h1 span {
     width: 32px;
   }
 }
+
+/* sponsors */
+.sponsors-showcase {
+  padding: 110px 52px;
+  background: #f4f4f7;
+}
+
+.sponsors-title {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #8fb2f0;
+  margin-bottom: 72px;
+}
+.sponsors-wall {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 72px 48px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.sponsor-logo {
+  width: 220px;
+  max-width: 220px;
+  max-height: 90px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  flex: 0 0 220px;
+}
+
+@media (max-width: 1100px) {
+  .sponsors-wall {
+    grid-template-columns: repeat(3, 200px);
+    gap: 56px 36px;
+  }
+}
+
+@media (max-width: 820px) {
+  .sponsors-showcase {
+    padding: 72px 24px;
+  }
+
+  .sponsors-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .sponsors-wall {
+    grid-template-columns: repeat(2, 140px);
+    gap: 32px 24px;
+  }
+
+  .sponsor-logo {
+    max-width: 140px;
+    max-height: 64px;
+  }
+}
+/* sponsors */
