@@ -1,757 +1,289 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: #f4f4f7;
-  color: #111;
-  overflow-x: hidden;
-}
-
-.hero {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  background:
-    linear-gradient(0deg, rgba(244,244,247,0.90) 0%, rgba(244,244,247,0.06) 10%, rgba(244,244,247,0.00) 18%),
-    linear-gradient(90deg, rgba(244,244,247,0.98) 0%, rgba(244,244,247,0.97) 18%, rgba(244,244,247,0.92) 28%, rgba(244,244,247,0.72) 38%, rgba(244,244,247,0.35) 48%, rgba(244,244,247,0.10) 58%, rgba(244,244,247,0.02) 68%, rgba(244,244,247,0.00) 100%),
-    linear-gradient(160deg, rgba(244,244,247,0.98) 0%, rgba(244,244,247,0.97) 18%, rgba(244,244,247,0.92) 28%, rgba(244,244,247,0.72) 38%, rgba(244,244,247,0.35) 48%, rgba(244,244,247,0.10) 58%, rgba(244,244,247,0.02) 68%, rgba(244,244,247,0.00) 100%),
-    url('https://indyguide-web-development.s3.us-east-2.amazonaws.com/listings/images/thumbnail/Bishkek-City-Tour-1698911568433.webp') right center / cover no-repeat;
-}
-
-.hero::before {
-  content: none;
-}
-
-.nav {
-  position: absolute;
-  top: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 72px);
-  max-width: 1360px;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 28px;
-  z-index: 5;
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-}
-
-.logo-img {
-  height: 42px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 34px;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #191919;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  transition: opacity 0.2s ease, color 0.2s ease;
-}
-
-.nav-links a:hover {
-  opacity: 0.7;
-}
-
-.register-btn {
-  display: inline-block;
-  text-decoration: none;
-  color: #5a48ff;
-  font-size: 30px;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  padding: 12px 20px;
-  border: 1px solid rgba(90,72,255,0.22);
-  border-radius: 999px;
-  background: rgba(255,255,255,0.72);
-  backdrop-filter: blur(8px);
-  transition: 0.25s ease;
-  white-space: nowrap;
-  margin-left: 10px;
-}
-
-.register-btn:hover {
-  transform: translateY(-2px);
-  border-color: #5a48ff;
-  background: rgba(255,255,255,0.88);
-}
-
-.content {
-  position: relative;
-  z-index: 2;
-  max-width: 100%;
-  padding: 170px 24px 40px 44px;
-}
-
-.meta {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  color: #7a7d89;
-  font-size: 25px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 18px;
-  flex-wrap: wrap;
-}
-
-.dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #5a48ff;
-  display: inline-block;
-}
-
-h1 {
-  font-size: 120px;
-  line-height: 0.9;
-  font-weight: 900;
-  letter-spacing: -0.075em;
-  color: #050505;
-  text-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
-  text-shadow: 0 0 0.01px rgba(0,0,0,0.01);
-}
-
-h1 span {
-  display: block;
-  color: #5a48ff;
-  margin-top: 10px;
-  letter-spacing: -0.07em;
-}
-
-.subtitle {
-  margin-top: 34px;
-  max-width: 420px;
-  color: rgb(88, 88, 88);
-  font-size: 20px;
-  line-height: 1.68;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
-
-.info-strip,
-.event-section,
-.cards-section,
-.faq-section {
-  padding: 88px 52px;
-  background: #f4f4f7;
-}
-
-.info-strip {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  padding-top: 34px;
-}
-
-.info-card,
-.event-grid,
-.faq-list details,
-.info-box {
-  border: 1px solid rgba(17,17,17,0.08);
-  background: rgba(255,255,255,0.46);
-  backdrop-filter: blur(4px);
-  border-radius: 28px;
-}
-
-.info-card {
-  padding: 32px;
-  min-height: 180px;
-}
-
-.accent-card {
-  background: linear-gradient(135deg, rgba(90,72,255,0.08), rgba(255,255,255,0.5));
-}
-
-.info-label,
-.section-head span,
-.event-side span {
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: #6e7180;
-}
-
-.info-text {
-  margin-top: 18px;
-  font-size: 28px;
-  line-height: 1.22;
-  font-weight: 700;
-  color: #101114;
-  max-width: 720px;
-}
-
-.section-head {
-  margin-bottom: 24px;
-}
-
-.event-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 0.8fr;
-  gap: 24px;
-  padding: 36px;
-}
-
-.event-main h2 {
-  font-size: 52px;
-  line-height: 0.95;
-  margin-bottom: 24px;
-  letter-spacing: -0.05em;
-}
-
-.event-main p {
-  max-width: 820px;
-  color: #6f7380;
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 22px;
-}
-
-.event-main a {
-  text-decoration: none;
-  color: #5a48ff;
-  font-weight: 800;
-  font-size: 14px;
-}
-
-.event-side {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 18px;
-  padding-left: 12px;
-}
-
-.event-side strong {
-  display: block;
-  margin-top: 8px;
-  font-size: 28px;
-  line-height: 1.1;
-  color: #0d0d10;
-}
-
-.alt-section {
-  background: linear-gradient(180deg, rgba(90,72,255,0.03), rgba(244,244,247,1));
-}
-
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.faq-list details {
-  padding: 24px 26px;
-}
-
-.faq-list summary {
-  cursor: pointer;
-  list-style: none;
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-
-.faq-list p {
-  margin-top: 14px;
-  color: #717480;
-  font-size: 17px;
-  line-height: 1.65;
-  max-width: 760px;
-}
-
-.team-display {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px 80px;
-  justify-content: center;
-  margin: 60px auto 0 auto;
-  max-width: 1100px;
-}
-
-.member-card {
-  flex: 0 1 300px;
-  position: relative;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.member-card:hover {
-  transform: translateY(-6px);
-}
-
-.member-img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  background: linear-gradient(135deg, rgba(90,72,255,0.18), rgba(17,17,17,0.06));
-  display: block;
-  margin: 0 auto 30px auto;
-  border-radius: 50%;
-  border: 2px solid rgba(17,17,17,0.08);
-  transition: 0.3s;
-  filter: grayscale(1);
-}
-
-.member-card:hover .member-img {
-  border-color: #5a48ff;
-  filter: grayscale(0);
-}
-
-.member-info {
-  padding: 0;
-  border-top: none;
-}
-
-.member-name {
-  font-size: 24px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  color: #111;
-}
-
-.member-role {
-  color: #7a7d87;
-  font-size: 14px;
-  margin-top: 5px;
-  font-weight: 600;
-}
-
-.info-connect-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  padding: 80px 52px;
-}
-
-.info-box {
-  padding: 36px 28px;
-}
-
-.info-box h2 {
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 24px;
-  letter-spacing: -0.03em;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
-  flex-wrap: wrap;
-}
-
-.contact-link {
-  width: 74px;
-  height: 74px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.7);
-  border: 1px solid rgba(17,17,17,0.08);
-  color: #111;
-  transition: 0.25s ease;
-}
-
-.contact-link svg {
-  fill: currentColor;
-}
-
-.contact-link:hover {
-  transform: translateY(-4px);
-  border-color: #5a48ff;
-  color: #5a48ff;
-}
-
-.slider-section {
-  padding: 88px 0;
-  overflow: hidden;
-  background: #f4f4f7;
-}
-
-.slider-label {
-  display: block;
-  padding: 0 52px;
-  margin-bottom: 26px;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: #6e7180;
-}
-
-.auto-carousel {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.auto-track {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: max-content;
-  animation: scroll-right 40s linear infinite;
-}
-
-.auto-track img {
-  width: 340px;
-  height: 500px;
-  object-fit: cover;
-  flex: 0 0 auto;
-  border-radius: 24px;
-  border: 1px solid rgba(17,17,17,0.08);
-  background: #ddd;
-  pointer-events: none;
-  user-select: none;
-}
-
-.auto-carousel::before,
-.auto-carousel::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 80px;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.auto-carousel::before {
-  left: 0;
-  background: linear-gradient(90deg, #f4f4f7 0%, rgba(244,244,247,0) 100%);
-}
-
-.auto-carousel::after {
-  right: 0;
-  background: linear-gradient(270deg, #f4f4f7 0%, rgba(244,244,247,0) 100%);
-}
-
-@keyframes scroll-right {
-  from {
-    transform: translateX(0);
-  } to {
-    transform: translateX(-50%);
-  }
-}
-
-.auto-carousel:hover .auto-track {
-  animation-play-state: paused;
-}
-
-@media (max-width: 1100px) {
-  .nav {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 16px;
-  }
-
-  .nav-links {
-    gap: 18px;
-  }
-
-  .content {
-    padding-top: 200px;
-  }
-
-  h1 {
-    font-size: 104px;
-  }
-
-  .event-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .info-strip,
-  .info-connect-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 820px) {
-  html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  .hero {
-    min-height: auto;
-    padding-bottom: 36px;
-    background:
-      linear-gradient(0deg, rgba(244,244,247,0.92) 0%, rgba(244,244,247,0.16) 14%, rgba(244,244,247,0.00) 24%),
-      linear-gradient(180deg, rgba(244,244,247,0.96) 0%, rgba(244,244,247,0.84) 18%, rgba(244,244,247,0.62) 34%, rgba(244,244,247,0.34) 52%, rgba(244,244,247,0.12) 70%, rgba(244,244,247,0.00) 88%),
-      url('https://indyguide-web-development.s3.us-east-2.amazonaws.com/listings/images/thumbnail/Bishkek-City-Tour-1698911568433.webp') center center / cover no-repeat;
-  }
-
-  .nav {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-    width: 100%;
-    max-width: 100%;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 14px;
-    padding: 20px 16px 0;
-    overflow: hidden;
-  }
-
-  .nav-links {
-    width: 100%;
-    gap: 8px 10px;
-    justify-content: center;
-  }
-
-  .nav-links a {
-    font-size: 10px;
-    line-height: 1.2;
-  }
-
-  .content {
-    padding: 72px 20px 20px;
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  h1 {
-    font-size: 48px;
-    line-height: 0.95;
-    letter-spacing: -0.06em;
-    word-break: break-word;
-  }
-
-  .subtitle {
-    max-width: 100%;
-    font-size: 15px;
-  }
-
-  .subtitle .register-btn {
-    display: inline-flex;
-    width: fit-content;
-    max-width: 100%;
-    margin-left: 0;
-    margin-top: 18px;
-  }
-
-  .info-strip,
-  .event-section,
-  .cards-section,
-  .faq-section,
-  .info-connect-row {
-    padding: 56px 20px;
-  }
-
-  .info-strip,
-  .info-connect-row {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .info-card,
-  .event-grid,
-  .faq-list details,
-  .info-box {
-    border-radius: 22px;
-  }
-
-  .info-card,
-  .info-box {
-    padding: 24px 18px;
-  }
-
-  .info-text {
-    font-size: 20px;
-    line-height: 1.28;
-  }
-
-  .section-head {
-    margin-bottom: 16px;
-  }
-
-  .event-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 22px 18px;
-  }
-
-  .event-main h2 {
-    font-size: 34px;
-    margin-bottom: 16px;
-  }
-
-  .event-main p {
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 16px;
-  }
-
-  .event-side {
-    padding-left: 0;
-    gap: 14px;
-  }
-
-  .event-side strong {
-    font-size: 20px;
-  }
-
-  .team-display {
-    gap: 36px;
-    margin-top: 36px;
-  }
-
-  .member-card {
-    flex: 0 1 100%;
-  }
-
-  .member-img {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 22px;
-  }
-
-  .member-name {
-    font-size: 20px;
-  }
-
-  .info-box h2 {
-    font-size: 18px;
-    margin-bottom: 18px;
-  }
-
-  .contact-links {
-    gap: 14px;
-  }
-
-  .contact-link {
-    width: 60px;
-    height: 60px;
-    border-radius: 16px;
-  }
-
-  .contact-link svg {
-    width: 30px !important;
-  }
-
-  .faq-list summary {
-    font-size: 18px;
-  }
-
-  .faq-list p {
-    font-size: 15px;
-    line-height: 1.55;
-  }
-
-  .slider-section {
-    padding: 56px 0;
-  }
-
-  .slider-label {
-    padding: 0 20px;
-    margin-bottom: 18px;
-  }
-
-  .auto-track {
-    gap: 8px;
-  }
-
-  .auto-track img {
-    width: 220px;
-    height: 320px;
-    border-radius: 18px;
-  }
-
-  .auto-carousel::before,
-  .auto-carousel::after {
-    width: 32px;
-  }
-}
-
-/* sponsors */
-.sponsors-showcase {
-  padding: 110px 52px;
-  background: #f4f4f7;
-}
-
-.sponsors-title {
-  text-align: center;
-  font-size: 64px;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.04em;
-  color: #8fb2f0;
-  margin-bottom: 72px;
-}
-.sponsors-wall {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 72px 48px;
-  max-width: 1024px;
-  margin: 0 auto;
-}
-
-.sponsor-logo {
-  width: 220px;
-  max-width: 220px;
-  max-height: 90px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  flex: 0 0 220px;
-}
-
-@media (max-width: 1100px) {
-  .sponsors-wall {
-    grid-template-columns: repeat(3, 200px);
-    gap: 56px 36px;
-  }
-}
-
-@media (max-width: 820px) {
-  .sponsors-showcase {
-    padding: 72px 24px;
-  }
-
-  .sponsors-title {
-    font-size: 40px;
-    margin-bottom: 40px;
-  }
-
-  .sponsors-wall {
-    grid-template-columns: repeat(2, 140px);
-    gap: 32px 24px;
-  }
-
-  .sponsor-logo {
-    max-width: 140px;
-    max-height: 64px;
-  }
-}
-/* sponsors */
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hackathon League</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>  
+    <section class="hero">
+        <nav class="nav">
+        <div class="nav-left">
+        </div>
+
+        <div class="nav-links">
+            <a href="#mission">О ПРОЕКТЕ</a>
+            <a href="#event">ХАКАТОН</a>
+            <a href="#team">КОМАНДА</a>
+            <a href="#mentors">МЕНТОРЫ</a>
+            <a href="#speakers">СПИКЕРЫ</a>
+            <a href="#sponsors">СПОНСОРЫ</a>
+            <a href="#faq">FAQ</a>
+            <a href="#connect">КОНТАКТЫ</a>
+        </div>
+        </nav>
+
+        <div class="content">
+        <div class="meta">
+            <span>2–3 МАЯ</span>
+            <span class="dot"></span>
+            <span>БИШКЕК</span>
+        </div>
+
+        <h1>
+            HACKATHON
+            <span>LEAGUE</span>
+        </h1>
+
+        <p class="subtitle">
+            Республиканский хакатон для школьников,<br>
+            где идеи превращаются в реальные проекты<br><br><br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5KWM0LH5bOWMSdtkpQehKXO1IYTECtZuQsjn91D9O2PWOXw/viewform?usp=dialog" target="_blank" class="register-btn">
+                REGISTER NOW
+            </a>
+        </p>
+        
+        </div>
+    </section>
+
+    <section class="info-strip" id="mission">
+        <div class="info-card">
+        <div class="info-label">НАША МИССИЯ</div>
+        <div class="info-text">Помочь школьникам превратить идеи в реальные технологические проекты и собрать сильное комьюнити будущих разработчиков.</div>
+        </div>
+        <div class="info-card accent-card">
+        <div class="info-label">ФОРМАТ</div>
+        <div class="info-text">48 часов командной работы, менторская поддержка, презентации и финальный питч лучших решений.</div>
+        </div>
+    </section>
+
+    <!--************************* Slider ***************************-->
+    <section class="slider-section">
+    <span class="slider-label">PREVIOUS HACKATHON EVENT</span>
+
+    <div class="auto-carousel">
+        <div class="auto-track">
+        <img src="images/t0.jpg" alt="">
+        <img src="images/t1.jpg" alt="">
+        <img src="images/t2.jpg" alt="">
+        <img src="images/t3.jpg" alt="">
+        <img src="images/t4.jpg" alt="">
+        <img src="images/t5.jpg" alt="">
+        <img src="images/t6.jpg" alt="">
+        <img src="images/t7.jpg" alt="">
+        <img src="images/t8.jpg" alt="">
+        <img src="images/t9.jpg" alt="">
+
+        <!-- duplicate for seamless loop -->
+        <img src="images/t0.jpg" alt="">
+        <img src="images/t1.jpg" alt="">
+        <img src="images/t2.jpg" alt="">
+        <img src="images/t3.jpg" alt="">
+        <img src="images/t4.jpg" alt="">
+        <img src="images/t5.jpg" alt="">
+        <img src="images/t6.jpg" alt="">
+        <img src="images/t7.jpg" alt="">
+        <img src="images/t8.jpg" alt="">
+        <img src="images/t9.jpg" alt="">
+        </div>
+    </div>
+    </section>
+    <!--************************* Slider ***************************-->
+
+    <section class="event-section">
+        <div class="section-head">
+        <span>О ХАКАТОНЕ</span>
+        </div>
+        <div class="event-grid">
+        <div class="event-main">
+            <h2>HACKATHON LEAGUE 2026</h2>
+            <p>Интенсивный республиканский хакатон для школьников, где участники работают в командах, создают MVP, получают обратную связь от менторов и защищают свои проекты перед жюри.</p>
+            <a href="#">ПОДРОБНЫЕ ПРАВИЛА →</a>
+        </div>
+        <div class="event-side">
+            <div>
+            <span>ДАТА</span>
+            <strong>2–3 МАЯ</strong>
+            </div>
+            <div>
+            <span>ЛОКАЦИЯ</span>
+            <strong>БИШКЕК</strong>
+            </div>
+            <div>
+            <span>ФОРМАТ</span>
+            <strong>КОМАНДЫ 2–5</strong>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+    <!-- Core team -->
+    <section class="cards-section" id="team">
+        <div class="section-head">
+            <h2 class="sponsors-title">Наша команда</h2>
+        </div>
+        <div class="team-display">
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Mamatganyev Nurmukhammad</div>
+                <div class="member-role">Team Leader</div>
+                </div>
+            </article>
+
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Amangeldiev Sherkhan</div>
+                <div class="member-role">Project Manager</div>
+                </div>
+            </article>
+
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Arapbaeva Zhyldyz</div>
+                <div class="member-role">Event Coordinator</div>
+                </div>
+            </article>
+
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Mukashov Daniar</div>
+                <div class="member-role">Event Manager</div>
+                </div>
+            </article>
+
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Baimyrzaev Aruubek</div>
+                <div class="member-role">Technical Manager</div>
+                </div>
+            </article>
+
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Tynchtykbekov Aivar</div>
+                <div class="member-role">SOCIAL GAY</div>
+                </div>
+            </article>
+            
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Symbatbekov Yenisey</div>
+                <div class="member-role">Videographer</div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- Core team -->
+
+    <!-- Sponsors -->
+    <section class="sponsors-showcase" id="sponsors">
+        <h2 class="sponsors-title">Спонсоры</h2>
+
+        <div class="sponsors-wall">
+            <img src="images/sponsor1.png" alt="Sponsor 1" class="sponsor-logo">
+            <img src="images/sponsor2.png" alt="Sponsor 2" class="sponsor-logo">
+            <img src="images/sponsor3.png" alt="Sponsor 3" class="sponsor-logo">
+            <img src="images/sponsor4.png" alt="Sponsor 4" class="sponsor-logo">
+            <img src="images/sponsor5.png" alt="Sponsor 5" class="sponsor-logo">
+            <img src="images/sponsor6.png" alt="Sponsor 6" class="sponsor-logo">
+            <img src="images/sponsor7.png" alt="Sponsor 7" class="sponsor-logo">
+        </div>
+    </section>
+    <!-- Sponsors -->
+
+    <section class="cards-section alt-section" id="mentors">
+        <div class="section-head">
+            <h2 class="sponsors-title">Менторы</h2>
+        </div>
+        <div class="team-display">
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Нурмухаммад</div>
+                <div class="member-role">Team Lead</div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <section class="cards-section alt-section" id="speakers">
+        <div class="section-head">
+            <h2 class="sponsors-title">Спикеры</h2>
+        </div>
+        <div class="team-display">
+            <article class="member-card">
+                <img src="PHOTO_URL_HERE" class="member-img">
+                <div class="member-info">
+                <div class="member-name">Нурмухаммад</div>
+                <div class="member-role">Team Lead</div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <div class="section-head">
+        <span>FAQ</span>
+        </div>
+        <div class="faq-list">
+        <details>
+            <summary>Кто может участвовать?</summary>
+            <p>Школьники, которым интересны технологии, стартапы и командная работа над проектами.</p>
+        </details>
+        <details>
+            <summary>Нужно ли приходить с готовой идеей?</summary>
+            <p>Нет. Можно прийти с идеей или собрать её уже на месте вместе с командой.</p>
+        </details>
+        <details>
+            <summary>Участие бесплатное?</summary>
+            <p>Да, участие 100 евро.</p>
+        </details>
+        </div>
+    </section>
+
+  <!--************************* Documents / Info ***************************-->
+    <section class="info-connect-row">
+    <div class="info-box" id="info">
+        <h2>ПОЛЕЗНАЯ ИНФОРМАЦИЯ</h2>
+        <div class="contact-links">
+        <a href="rules.html" target="_blank" class="contact-link" title="Правила">
+            <svg viewBox="0 0 24 24" style="width:40px;"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        </a>
+        <a href="handbook.html" target="_blank" class="contact-link" title="Хэндбук">
+            <svg viewBox="0 0 24 24" style="width:40px;"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4z"/></svg>
+        </a>
+        </div>
+    </div>
+  <!--************************* Documents / Info ***************************-->
+
+    <!--************************* Connect ***************************-->
+    <div class="info-box" id="connect">
+        <h2>СВЯЗАТЬСЯ С НАМИ</h2>
+        <div class="contact-links">
+        <a href="https://t.me/your_telegram" target="_blank" class="contact-link" title="Telegram">
+            <svg viewBox="0 0 24 24" style="width:40px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/hackathon.league/" target="_blank" class="contact-link" title="Instagram">
+            <svg viewBox="0 0 24 24" style="width:40px;"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8A3.6 3.6 0 007.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6A3.6 3.6 0 0016.4 4H7.6m4.4 3.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9m0 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5m4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/></svg>
+        </a>
+        <a href="mailto:hackathonleaguekg@gmail.com" target="_blank" class="contact-link" title="Email">
+            <svg viewBox="0 0 24 24" style="width:40px;"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        </div>
+    </div>
+    </section>
+    <!--************************* Connect ***************************-->
+</body>
+</html>
