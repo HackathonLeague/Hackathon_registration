@@ -1,52 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAGA | HANDBOOK</title>
+    <title>Hackathon League | Регламент</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #000; --surface: #050505; --border: #1a1a1a; --accent: #fff; --text-dim: #666; }
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { background: var(--bg); color: var(--accent); font-family: 'JetBrains Mono', monospace; margin: 0; display: flex; }
+        :root {
+            --bg: #0b1220;
+            --surface: #111a2b;
+            --border: #22314d;
+            --accent: #eef4ff;
+            --text-dim: #9fb0cc;
+            --title: #dbe8ff;
+        }
 
-        /* Sidebar Nav */
-        .sidebar { width: 300px; height: 100vh; border-right: 1px solid var(--border); position: fixed; padding: 40px; display: flex; flex-direction: column; gap: 20px; }
-        .sidebar a { color: var(--text-dim); text-decoration: none; font-size: 12px; transition: 0.3s; }
-        .sidebar a:hover, .sidebar a.active { color: var(--accent); }
-        .sidebar .back-link { margin-bottom: 40px; color: var(--accent); font-weight: bold; }
+       body {
+            background: var(--bg);
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+            margin: 0;
+            display: flex;
+        }
 
-        /* Content Area */
-        .content { margin-left: 300px; padding: 80px 100px; max-width: 1000px; }
-        .label { color: var(--text-dim); font-size: 12px; letter-spacing: 4px; display: block; margin-bottom: 20px; }
-        h1 { font-size: 60px; letter-spacing: -3px; margin: 0 0 60px 0; }
-        h2 { font-size: 24px; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 60px; }
-        p { color: var(--text-dim); line-height: 1.8; font-size: 16px; }
-        
-        .doc-section { margin-bottom: 100px; scroll-margin-top: 80px; }
+        .sidebar {
+            width: 300px;
+            height: 100vh;
+            border-right: 1px solid var(--border);
+            position: fixed;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: rgba(11, 18, 32, 0.96);
+        }
+
+        .sidebar a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 12px;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            color: var(--accent);
+        }
+
+        .sidebar .back-link {
+            margin-bottom: 40px;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .content {
+            margin-left: 300px;
+            padding: 80px 100px;
+            max-width: 1000px;
+        }
+
+        .label {
+            color: var(--text-dim);
+            font-size: 12px;
+            letter-spacing: 4px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 60px;
+            letter-spacing: -3px;
+            margin: 0 0 60px 0;
+            color: var(--title);
+        }
+
+        h2 {
+            font-size: 24px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 60px;
+            color: var(--title);
+        }
+
+        p, li {
+            color: var(--text-dim);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .rule-block {
+            border-left: 1px solid #31476d;
+            padding-left: 20px;
+        }
+
+        .print-btn {
+            background: #16233a;
+            color: var(--accent);
+            border: 1px solid var(--border);
+            padding: 12px 14px;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .print-btn:hover {
+            background: #1c2b46;
+        }
+
+        .content {
+            margin-left: 300px;
+            padding: 80px 100px;
+            max-width: 1050px;
+        }
+
+        .label {
+            color: var(--text-dim);
+            font-size: 12px;
+            letter-spacing: 4px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 56px;
+            letter-spacing: -2px;
+            margin: 0 0 60px 0;
+            line-height: 1;
+        }
+
+        h2 {
+            font-size: 24px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+
+        p, li {
+            color: #d0d0d0;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 16px 0;
+        }
+
+        .doc-section {
+            margin-bottom: 90px;
+            scroll-margin-top: 80px;
+        }
+
+        .rule-block {
+            border-left: 1px solid #2a2a2a;
+            padding-left: 20px;
+        }
+
+        .highlight {
+            color: white;
+        }
 
         @media (max-width: 900px) {
-            body { flex-direction: column; }
-            .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border); padding: 20px; }
-            .content { margin-left: 0; padding: 40px 20px; }
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                padding: 20px;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
         }
 
         @media print {
-            /* Hide the navigation and footer when printing */
-            .header, footer, .back-link {
+            .sidebar {
                 display: none !important;
             }
-            
-            /* Reset colors for paper (White background, Black text) */
+
             body {
+                display: block;
                 background: white !important;
                 color: black !important;
+                font-family: serif;
             }
-            
-            .container {
-                padding: 0;
+
+            .content {
                 margin: 0;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            h1, h2 {
+                color: black !important;
+            }
+
+            p, li, .label {
+                color: #222 !important;
             }
 
             .rule-block {
@@ -54,17 +219,9 @@
                 page-break-inside: avoid;
             }
 
-            h1, h2 {
-                color: black !important;
-            }
-
-            p, li {
-                color: #333 !important;
-            }
-
-            .critical, .critical h2, .critical p {
-                color: red !important;
-                border-color: red !important;
+            .doc-section {
+                page-break-inside: avoid;
+                margin-bottom: 40px;
             }
         }
     </style>
@@ -74,32 +231,241 @@
     <nav class="sidebar">
         <a href="index.html" class="back-link">← BACK TO BASE</a>
         <span class="label">CONTENTS</span>
-        <a href="#intro">INTRODUCTION</a>
-        <a href="#schedule">SCHEDULE</a>
-        <a href="#judging">JUDGING</a>
-        <button onclick="window.print()" class="back-link" style="background:rgb(31, 30, 30); cursor:pointer; margin-right: 5px;">
-            DOWNLOAD PDF
-        </button>
+        <a href="#general">1. ОБЩИЕ ПОЛОЖЕНИЯ</a>
+        <a href="#goals">2. ЦЕЛИ И ЗАДАЧИ</a>
+        <a href="#participation">3. УСЛОВИЯ УЧАСТИЯ</a>
+        <a href="#format">4. ФОРМАТ ПРОВЕДЕНИЯ</a>
+        <a href="#ethics">5. ПРАВИЛА ПОВЕДЕНИЯ</a>
+        <a href="#projects">6. ТРЕБОВАНИЯ К ПРОЕКТАМ</a>
+        <a href="#roles">7. РОЛИ В КОМАНДЕ</a>
+        <a href="#tools">8. ТЕХНОЛОГИИ И ИНСТРУМЕНТЫ</a>
+        <a href="#responsibility">9. ОТВЕТСТВЕННОСТЬ</a>
+        <a href="#awards">10. НАГРАДЫ</a>
+        <a href="#org">11. ОРГАНИЗАЦИОННЫЕ МОМЕНТЫ</a>
+        <a href="#international">12. ДОПОЛНИТЕЛЬНЫЕ ПОЛОЖЕНИЯ</a>
+        <a href="#final">ЗАКЛЮЧЕНИЕ</a>
+
+        <button onclick="window.print()" class="print-btn">DOWNLOAD PDF</button>
     </nav>
 
     <main class="content">
-        <span class="label">SAGA SYSTEMS</span>
-        <h1 style="color:white;">PARTICIPANT HANDBOOK</h1>
+        <span class="label">HACKATHON LEAGUE</span>
+        <h1>РЕГЛАМЕНТ УЧАСТИЯ В ХАКАТОНЕ<br>«РОБОТИЗАЦИЯ И АВТОМАТИЗАЦИЯ»</h1>
 
-        <section class="doc-section" id="intro">
-            <h2 style="color:white;">PLAN</h2>
-            <p style="color:white;">Approximately 300 participants are expected to join the event. Prior to the main program, online informational sessions will be conducted on April 7–8 to provide guidance and preparation for all participants.
-            The event will be supported by 10 mentors, who will guide teams throughout the development of their projects. In addition, 6 judges will evaluate the final presentations and select the most innovative and impactful solutions. To ensure smooth organization and coordination, around 30 volunteers will assist during the event, including 15 volunteers from the lyceum.</p>
+        <section class="doc-section" id="general">
+            <h2>1. Общие положения</h2>
+            <div class="rule-block">
+                <p>1.1. Хакатон «Роботизация и автоматизация» (далее — Хакатон) является образовательным и соревновательным мероприятием для учащихся старших классов.</p>
+                <p>1.2. Организатором Хакатона выступают ученики Президентского Лицея «Акылман» и Seitek STEM при поддержке партнеров.</p>
+                <p>1.3. Хакатон направлен на разработку инновационных решений в области робототехники, автоматизации процессов и применения современных технологий.</p>
+                <p>1.4. Настоящий регламент определяет порядок участия, правила поведения, требования к проектам и иные условия проведения Хакатона.</p>
+            </div>
         </section>
 
-        <section class="doc-section" id="schedule">
-            <h2 style="color:white;">EVENT SCHEDULE</h2>
-            <p style="color:white;">The program will take place over three days at different venues: <br> <br>
-            DAY 1 – Seytek STEM Center: Opening Ceremony and official launch of the event. <br> <br>
-            DAY 2 – Seytek STEM Center: Team collaboration, mentorship sessions, and project development. <br> <br>
-            DAY 3 – Seytek STEM Center: Final project completion and presentations to the judging panel.</p>
+        <section class="doc-section" id="goals">
+            <h2>2. Цели и задачи Хакатона</h2>
+            <div class="rule-block">
+                <p><span class="highlight">Цель:</span> Развитие инженерного мышления, креативности и практических навыков у школьников через решение реальных технологических задач.</p>
+                <p><span class="highlight">Задачи:</span></p>
+                <ul>
+                    <li>Стимулирование интереса к робототехнике, автоматизации и инженерии</li>
+                    <li>Развитие навыков командной работы и проектного мышления</li>
+                    <li>Применение знаний в области STEM (Science, Technology, Engineering, Mathematics)</li>
+                    <li>Знакомство с современными технологиями (AI, IoT, автоматизированные системы)</li>
+                    <li>Формирование навыков презентации и защиты проектов</li>
+                </ul>
+            </div>
         </section>
 
+        <section class="doc-section" id="participation">
+            <h2>3. Условия участия</h2>
+            <div class="rule-block">
+                <p>3.1. К участию допускаются школьники в возрасте 14–18 лет.</p>
+                <p>3.2. Участие осуществляется в командах от 2 до 5 человек.</p>
+                <p>3.3. Каждая команда должна пройти обязательную регистрацию в установленные сроки.</p>
+                <p>3.4. Вся основная работа выполняется участниками.</p>
+                <p>3.5. Один участник может состоять только в одной команде.</p>
+            </div>
+        </section>
+
+        <section class="doc-section" id="format">
+            <h2>4. Формат проведения</h2>
+            <div class="rule-block">
+                <p>4.1. Хакатон проводится в офлайн-формате.</p>
+                <p>4.2. Продолжительность: от 24 до 72 часов непрерывной или поэтапной работы.</p>
+                <p><span class="highlight">Этапы Хакатона:</span></p>
+                <ul>
+                    <li>Открытие и постановка задач</li>
+                    <li>Сессия спикеров</li>
+                    <li>Основной этап разработки (Build Phase)</li>
+                    <li>Менторские сессии и консультации</li>
+                    <li>Подготовка презентаций</li>
+                    <li>Финальная защита проектов (Pitch)</li>
+                    <li>Подведение итогов и награждение</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="doc-section" id="ethics">
+            <h2>5. Правила поведения и этика</h2>
+            <div class="rule-block">
+                <p>5.1. Участники обязаны соблюдать принципы уважения, честности и сотрудничества.</p>
+                <p>5.2. Запрещены:</p>
+                <ul>
+                    <li>Плагиат и копирование чужих проектов</li>
+                    <li>Оскорбительное или дискриминационное поведение</li>
+                    <li>Нарушение правил площадки или онлайн-платформ</li>
+                </ul>
+                <p>5.3. Участники обязаны соблюдать указания организаторов и менторов.</p>
+                <p>5.4. Нарушение правил может привести к дисквалификации.</p>
+            </div>
+        </section>
+
+        <section class="doc-section" id="projects">
+            <h2>6. Требования к проектам</h2>
+            <div class="rule-block">
+                <p>6.1. Проекты должны соответствовать теме «Роботизация и автоматизация».</p>
+                <p>6.2. Проект должен включать хотя бы один из элементов:</p>
+                <ul>
+                    <li>Роботизированная система</li>
+                    <li>Автоматизация процесса (производственного, бытового, социального)</li>
+                    <li>Использование искусственного интеллекта</li>
+                    <li>Применение сенсоров, контроллеров или IoT</li>
+                </ul>
+                <p>6.3. Проект должен быть:</p>
+                <ul>
+                    <li>Оригинальным</li>
+                    <li>Реалистичным (возможность реализации)</li>
+                    <li>Технически обоснованным</li>
+                </ul>
+                <p>6.4. Минимальные требования:</p>
+                <ul>
+                    <li>Прототип (физический или цифровой)</li>
+                    <li>Презентация проекта</li>
+                    <li>Описание проблемы и решения</li>
+                </ul>
+                <p><span class="highlight">Примеры проектов:</span></p>
+                <ul>
+                    <li>Умная система автоматического полива растений</li>
+                    <li>Робот-помощник для людей с ограниченными возможностями</li>
+                    <li>Автоматизированная система сортировки мусора</li>
+                    <li>AI-система управления «умным домом»</li>
+                    <li>Робот для школьных лабораторий</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="doc-section" id="roles">
+            <h2>7. Роли участников в команде</h2>
+            <div class="rule-block">
+                <p>Рекомендуется распределение ролей:</p>
+                <ul>
+                    <li>Team Lead — координация команды</li>
+                    <li>Инженер/разработчик — техническая реализация</li>
+                    <li>Программист — разработка ПО и алгоритмов</li>
+                    <li>Дизайнер/продуктолог — UX/UI и концепция</li>
+                    <li>Презентер — защита проекта</li>
+                </ul>
+                <p>(Один участник может совмещать несколько ролей)</p>
+            </div>
+        </section>
+
+        <section class="doc-section" id="tools">
+            <h2>8. Использование технологий и инструментов</h2>
+            <div class="rule-block">
+                <p>8.1. Допускается использование:</p>
+                <ul>
+                    <li>Языков программирования (Python, C++, Java и др.)</li>
+                    <li>Платформ для разработки (Arduino, Raspberry Pi и др.)</li>
+                    <li>AI-инструментов (машинное обучение, компьютерное зрение)</li>
+                    <li>CAD-систем и 3D-моделирования</li>
+                </ul>
+                <p>8.2. Разрешено использование открытых библиотек и API при условии указания источников.</p>
+                <p>8.3. Запрещено:</p>
+                <ul>
+                    <li>Использование полностью готовых решений без доработки</li>
+                    <li>Нарушение лицензий и авторских прав</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="doc-section" id="responsibility">
+            <h2>9. Ответственность участников</h2>
+            <div class="rule-block">
+                <p>9.1. Участники несут ответственность за:</p>
+                <ul>
+                    <li>Достоверность представленных данных</li>
+                    <li>Соблюдение авторских прав</li>
+                    <li>Безопасность используемых решений</li>
+                </ul>
+                <p>9.2. Организаторы не несут ответственности за:</p>
+                <ul>
+                    <li>Технические сбои со стороны участников</li>
+                    <li>Утрату личных данных или оборудования</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="doc-section" id="awards">
+            <h2>10. Награды и признание</h2>
+            <div class="rule-block">
+                <p>10.1. Победители определяются по установленным критериям оценки.</p>
+                <p>10.2. Победители получают:</p>
+                <ul>
+                    <li>Дипломы и сертификаты</li>
+                    <li>Призы от партнеров</li>
+                    <li>Возможности стажировок и дальнейшего развития проекта</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="doc-section" id="org">
+            <h2>11. Организационные моменты</h2>
+            <div class="rule-block">
+                <p>11.1. Все ключевые даты (регистрация, старт, финал) объявляются заранее.</p>
+                <p>11.2. Коммуникация осуществляется через:</p>
+                <ul>
+                    <li>Официальные чаты (Telegram/Discord)</li>
+                    <li>Электронную почту</li>
+                    <li>Платформу Хакатона</li>
+                </ul>
+                <p>11.3. Участники обязаны следить за обновлениями и уведомлениями.</p>
+                <p>11.4. Организационный взнос:</p>
+                <p>Для участия в Хакатоне установлен организационный взнос в размере 200 (двести) сом с каждого участника.</p>
+                <p>Взнос направлен на покрытие организационных расходов (материалы, техническое обеспечение, питание, призовой фонд и др.).</p>
+                <p>Организаторы обеспечивают прозрачность использования средств.</p>
+                <p>Оплата производится после подтверждения регистрации команды в установленные сроки.</p>
+                <p>В случае отказа от участия после оплаты взнос не возвращается, за исключением случаев, предусмотренных организаторами.</p>
+            </div>
+        </section>
+
+        <section class="doc-section" id="international">
+            <h2>12. Дополнительные положения (международный уровень)</h2>
+            <div class="rule-block">
+                <p>12.1. Рабочие языки Хакатона — русский, кыргызский и английский.</p>
+                <p>12.2. Приветствуется использование:</p>
+                <ul>
+                    <li>Искусственного интеллекта</li>
+                    <li>Автоматизированных систем управления</li>
+                    <li>Устойчивых и экологичных решений</li>
+                </ul>
+                <p>12.3. Особое внимание уделяется:</p>
+                <ul>
+                    <li>Практической применимости</li>
+                    <li>Масштабируемости решений</li>
+                    <li>Влиянию на общество</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="doc-section" id="final">
+            <h2>Заключение</h2>
+            <div class="rule-block">
+                <p>Хакатон «Роботизация и автоматизация» — это не только соревнование, но и платформа для создания идей, которые могут изменить будущее.</p>
+                <p>Участники получают возможность проявить себя, поработать с технологиями мирового уровня и сделать первый шаг в инженерной и научной карьере.</p>
+                <p class="highlight">Создавайте. Экспериментируйте. Автоматизируйте будущее. 🚀</p>
+            </div>
+        </section>
     </main>
 
 </body>
