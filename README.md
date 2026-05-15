@@ -65,3 +65,4 @@ Future Improvements
 Add its own registration page to get rid of auxilary tools like google forms
 
 Author [Baimyrzaev Aruubek]
+Contact me : baymyrzaevaruubek10@gmail.com
