@@ -44,7 +44,7 @@ https://github.com/HackathonLeague/Hackathon_registration
 
 ## Vercel Deployment Link
 ```bash
-https://hackathon-registration-ipqw5sc67.vercel.app/
+https://hackathon-registration-rho.vercel.app/
 ```
 
 ![Home Page](images/home.png)
