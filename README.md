@@ -1,4 +1,4 @@
-# hackathon_registration
+# Hackathon Registration
 
 A modern and responsive landing page for the “Hackathon League 2026” school hackathon event.  
 The website presents information about the event, team members, mentors, sponsors, speakers, FAQ, and registration links.
@@ -8,7 +8,7 @@ The website presents information about the event, team members, mentors, sponsor
 ## Project Description
 
 This project is a fully responsive event website created for a republican hackathon for школьники (high school students).  
-The goal was to build a clean, modern, and visually engaging website that provides all necessary information about the hackathon in one place.
+The goal was to build a clean, modern, and visually engaging website that provides all necessary information about the hackathon in one place. Over 200+ hundred users validated.
 
 ---
 
